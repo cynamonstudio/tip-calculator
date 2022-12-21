@@ -1,0 +1,63 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<link rel="stylesheet" href="style.css">
+<html>
+  <head>
+    <title>JavaScript for Everyone:DOM</title>
+  </head>
+  <body>
+    <p id="count" style="width:100%;position: fixed;top: 0;text-align: center;">amount</p>
+    <div class="wrapper">
+      <div class="container">
+        <div class="block">
+           <div class="field">
+               <p class="title" >Bill</p>
+               <input class="input" id="input-bill" type="text"  placeholder="0">
+           </div>
+           <div class="field">
+               <p class="title">Select Tip %</p>
+               <div class="grid-buttons">
+                    <button class="button perc" id="5">5%</button>
+                    <button class="button perc" id="10">10%</button>
+                    <button class="button perc" id="15">15%</button>
+                    <button class="button perc" id="25">25%</button>
+                    <button class="button perc" id="50">50%</button>
+                    <input id="input-percent" class="input grid-input perc" type="text" placeholder="Custom">
+               </div>              
+            </div>
+            <div class="field">
+                <p class="title" id="people-title">Number of people</p>
+                <input class="input" id="input-people" type="number" min="0" step="1" placeholder="1" value="1">
+             </div>
+        </div>
+        <div class="block right">
+            <div class="summary-block">
+                <div class="summary-block-half">
+                    <p class="summary-title">Tip amount</p>
+                    <p class="summary-subtitle">per person</p>
+                </div>
+                <div class="summary-block-half">
+                    <p  id="tip-amount" class="summary-amount">$0.00</p>
+                </div>
+            </div>
+            <div class="summary-block">
+                <div class="summary-block-half">
+                    <p class="summary-title">Total tip amount</p>
+                    <p class="summary-subtitle">for all</p>
+                </div>
+                <div class="summary-block-half">
+                    <p id="total-amount" class="summary-amount" >$0.00</p>
+                </div>
+            </div>
+      
+        <div  class="summary-block summary-button">        
+                <button class="reset-button" >Reset</button>
+        </div>
+    </div>
+           
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
