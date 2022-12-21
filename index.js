@@ -35,15 +35,8 @@ function formActions(){
 
     // Number of people field ↓
     document.querySelector('#input-people').addEventListener('input', (ev) => {
-        
         people=parseInt(ev.target.value)
-
-        if(people>0){
-            calcTip() // ← calculate tip function 
-        }else{
-            people=1
-            document.querySelector("#people-title").innerHTML="Musi być większe od 0"
-        }
+        calcTip() // ← calculate tip function 
     })
 
     // Percentage fields ↓
@@ -113,10 +106,10 @@ formActions()
 
 
 
-// Reset button ↓
+// RESET BUTTON FUNCTIONALITY ↓
 document.querySelector('.reset-button').addEventListener('click',ev=>{
     
-    document.querySelector('#input-people').value=''
+    document.querySelector('#input-people').value='1'
     document.querySelector('#input-bill').value=''
     document.querySelector('#input-percent').value=''
 
@@ -130,70 +123,4 @@ document.querySelector('.reset-button').addEventListener('click',ev=>{
 
     formActions() //REPEAT MAIN FUNCTION
 })
-
-
-
-
-
-// //The year color is changing every 1 second
-
-// let h1Element=document.querySelector('h1')
-// let h1ElementSplit = h1Element.innerHTML.split(" ")
-
-// h1Element.innerHTML=''
-
-// h1ElementSplit.forEach((el,i,array)=>{
-//     if(i==array.length-1){
-//         h1Element.innerHTML += "<span id='year'>"+el+"</span>"
-//     }else{
-//         h1Element.innerHTML += el+" "
-//     }  
-// })
-
-// const colorsArray =['blue','red','green','beige','yellow']
-
-// function changeColor(array,targetIdString){
-//     const el = document.getElementById(targetIdString)
-//     el.style.color=array[Math.floor(Math.random()*(array.length))]
-// }
-
-// setInterval(()=>{changeColor(colorsArray,'year')},1000)
-
-
-// //The date and time background color is changing every one second
-// let dateElement=document.querySelector('h3')
-
-
-// setInterval(()=>{
-//     let date = new Date()
-//     let dateString = `${date.getFullYear()}.${date.getDate()}.${date.getDay()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
-//     dateElement.innerHTML=dateString
-//     randomNum=()=>{
-//         return Math.floor(Math.random()*255)
-//     }
-//     dateElement.style.backgroundColor="rgb("+randomNum()+","+randomNum()+","+randomNum()+")"
-//  }
-//     ,1000)
-
-// // Completed challenge has background green 
-// // Ongoing challenge has background yellow
-// // Coming challenges have background red
-
-// let completePattern = /Done/
-// let ongoingPattern = /Ongoing/
-// let ComingPattern = /Coming/
-// let listElements=document.querySelectorAll('li')
-// listElements.forEach(el=>{
-//     let textInside=el.innerText
-    
-//     if(textInside.match(completePattern)){
-//         el.style.backgroundColor="green"
-//     }else if(textInside.match(ongoingPattern)){
-//         el.style.backgroundColor="yellow"
-//     }else{
-//         el.style.backgroundColor="red"
-//     }
-   
-// })
-
 
